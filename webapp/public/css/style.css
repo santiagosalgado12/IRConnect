@@ -1,0 +1,94 @@
+.button2 {
+    margin: 0;
+    display: block;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 20px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #FFFFFF; /* Blanco para el texto */
+    background: #0d83fd;
+    border: 1px solid #0d83fd; /* Azul marino oscuro */
+    box-shadow: 1px 1px 4px #c5c5c5, 0px 0px 3px #ffffff;
+}
+.button2::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0369d6 0%, #0369d6 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+  
+  .button2:hover::before {
+   width: 9em;
+  }
+
+/* #esp{
+    margin:15px;
+} */
+#espList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 200px)); /* Máximo 200px por botón */
+    gap: 15px; /* Espaciado entre botones */
+    justify-content: center; /* Centra la grilla */
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    max-width: 450px; /* Limita el ancho total de la grilla */
+}
+
+/* Asegurar que los items se centren */
+#espList li {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Que no se deformen */
+}
+
+/* En pantallas pequeñas, los elementos van uno debajo del otro */
+@media (max-width: 480px) {
+    #espList {
+        grid-template-columns: 1fr; /* Solo una columna */
+        max-width: 250px; /* Ajustar el ancho */
+    }
+}
+
+
+/* Ajuste para pantallas horizontales medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #espList li {
+        flex: 1 1 calc(45% - 10px); /* Ocupa el 45% del ancho en pantallas horizontales medianas */
+    }
+}
+
+/* Ajuste adicional para asegurar que los botones no tengan separación extra */
+
+h1, h2 {
+    /* color: #ebebeb; */
+    text-align: center; /* Azul marino oscuro */
+}
+.titulos{
+    font-size: 60px;
+    padding: 30px;
+}
+
+p {
+    color: #c2c4c2; /* Gris carbón */
+}
+  body {
+    height: 100vh;
+    color: black;
+
+}
+
+
+

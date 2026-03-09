@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(207, 226, 255); 
+    text-decoration: none;
+}
+
+.remote-control {
+    background-color: #ffffff;
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 10px;
+
+}
+
+.button {
+    background-color: #4A4A4A;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.logo-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.button#on-off {
+    background-color: red;
+    left: 0;
+}
+
+.logo-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+.button2{
+    left: 11px;
+    margin: 0;
+    display: block;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 20px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #FFFFFF; /* Blanco para el texto */
+    background: #0d83fd;
+    border: 1px solid #0d83fd; /* Azul marino oscuro */
+    box-shadow: 1px 1px 4px #c5c5c5, 0px 0px 3px #ffffff;
+    top: -20px; /* lo sube */
+    
+}
+.button2::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #3e8ee4 20%, #0369d6 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.button2:hover::before {
+    width: 9em;
+}

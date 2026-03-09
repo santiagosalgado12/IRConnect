@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# Permitir HTTP solo en las rutas específicas de la ESP32
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} ^/(new_esp/receive|handle/updateDbsignal|handle/deleteData)$ [NC]
+RewriteRule .* - [L]
+
+# Redirigir todo lo demás a HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=307]
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirige solo si no es un archivo/directorio existente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Evita redirección para archivos CSS/JS/IMG
+    RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico)$ [NC]
+
+    # Redirige TODO lo demás al index.php SIN modificar la URL
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Bloquear acceso a archivos sensibles
+<FilesMatch "\.(env|log|ini|htaccess|db|sql|json)$">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,153 @@
+/* Barra de navegación */
+body {
+  
+    background-color: rgb(207, 226, 255);
+    color: #333333; /* Gris carbón para el texto */
+    min-height: 160vh;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+li {
+    background: #2980B9;
+    margin: 15px 0;
+    padding: 15px 20px; /* Ajusta el padding para un mejor espaciado */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 20px;
+    line-height: 1.8;
+    color: white;
+    min-height: 50px; /* Asegura que las cajas no sean demasiado pequeñas */
+}
+
+li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+li img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 150px;
+}
+
+b {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+.acciones{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    
+  } 
+  .acciones button {
+    font-size: 18px;
+    padding: 15px 30px;
+    
+  }
+
+  .button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    padding: 0.2em 0,5em;
+    cursor: pointer;
+    font-size: 21px;
+    border-radius: 0.5em;
+    background: #0d83fd;
+    border: 1px solid #0d83fd;
+    box-shadow: 1px 1px 4px #c5c5c5, 0px 0px 3px #ffffff;
+    
+
+}
+
+.button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #fa8560;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:hover {
+    color: #ffffff;
+    border: 1px solid #2C3E50;
+}
+
+.button2:hover:before {
+    top: -35%;
+    background-image: linear-gradient(to right, #0369d6 0%, #0369d6 100%);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}

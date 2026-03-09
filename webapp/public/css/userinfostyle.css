@@ -1,0 +1,150 @@
+    body { /* Azul marino a azul petróleo */
+        color: #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Altura completa de la ventana */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(207, 226, 255);
+ /* Color de fondo suave */
+    }
+    .info{
+        list-style-position: inside;
+        font-size: 25px;
+        
+    }
+    nav.navbar {
+        background: linear-gradient(135deg, #0F2027, #203A43, #2C5364); /* Negro a azul oscuro */
+    }
+    
+    /* Links de navegación */
+    .navbar .nav-link {
+        color: #BDC3C7; /* Gris claro */
+    }
+    
+    .navbar .nav-link:hover {
+        color: #2980B9; /* Azul profundo */
+    }   
+    h1{
+      font-size: 40px;
+      text-align: justify;
+    }
+
+   
+    button:hover {
+        opacity: 1;
+    }
+
+    button:active {
+        top: 4px;
+        box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+    }
+    .button2 {
+        display: inline-block;
+        transition: all 0.2s ease-in;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        color: #ffffff;
+        padding: 0.2em 0,5em;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 0.5em;
+        background: #2C3E50;
+        border: 1px solid #2C3E50;
+        box-shadow: 1px 1px 4px #c5c5c5, 0px 0px 3px #ffffff;
+    
+    }
+    
+    .button2:active {
+        color: #666;
+        box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    }
+    
+    .button2:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.25);
+        top: 100%;
+        width: 140%;
+        height: 180%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+    }
+    
+    .button2:after {
+        content: "";
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.45);
+        top: 180%;
+        width: 160%;
+        height: 190%;
+        background-color: #fa8560;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+    }
+    
+    .button2:hover {
+        color: #ffffff;
+        border: 1px solid #2C3E50;
+    }
+    
+    .button2:hover:before {
+        top: -35%;
+        background-image: linear-gradient(to right, #2980B9 0%, #4CA1AF 100%);
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+    .circulo {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        animation: flotando 10s infinite ease-in-out;
+    }
+    
+    .circulo:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+    
+    .circulo:nth-child(2) {
+        width: 150px;
+        height: 150px;
+        top: 70%;
+        left: 30%;
+        animation-delay: 2s;
+    }
+    
+    .circulo:nth-child(3) {
+        width: 300px;
+        height: 300px;
+        top: 40%;
+        right: 10%;
+        animation-delay: 4s;
+    }
+    
+    .circulo:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        bottom: 15%;
+        right: 40%;
+        animation-delay: 6s;
+    }
+    @keyframes flotando{0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-50px) translateX(50px);
+    }}
+    
+    
